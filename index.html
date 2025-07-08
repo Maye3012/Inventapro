@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventapro - Iniciar Sesión</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <!-- Logo debajo del título -->
+            <h1>Inventapro</h1>
+            <img src="./assets/images/logoinventapro.jpg" alt="Logo de Inventapro">
+        </div>
+        
+        <!-- Menú de accesibilidad -->
+        <div class="accesibilidad-contenedor">
+            <input type="checkbox" id="accesibilidad-toggle" hidden>
+            <label for="accesibilidad-toggle" class="accesibilidad-boton" aria-label="Opciones de accesibilidad">⚙️ Accesibilidad</label>
+            <div class="accesibilidad-menu">
+                <button id="aumentar-fuente" aria-label="Aumentar el tamaño del texto">Aumentar Texto</button>
+                <button id="reducir-fuente" aria-label="Disminuir el tamaño del texto">Disminuir Texto</button>
+                <button id="contraste-toggle" aria-label="Cambiar al modo de alto contraste">Alto Contraste</button>
+                <button id="restablecer" aria-label="Restablecer el estilo de la página">Restablecer</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario de inicio de sesión -->
+    <main class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form" action="#">
+            <input type="email" id="email" placeholder="Correo electrónico" required aria-label="Correo electrónico">
+            <input type="password" id="password" placeholder="Contraseña" required aria-label="Contraseña">
+            <button type="submit" aria-label="Ingresar">Ingresar</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Inventapro 2025. La mejor solución en tus manos.</p>
+    </footer>
+
+    <!-- Enlace al script JS -->
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventarios</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Inventarios</h1>
+
+        <div class="logout">
+            <a href="../index.html" aria-label="Cerrar sesión">Cerrar Sesión</a>
+        </div>
+
+        <div class="resumen">
+            <h2>Resumen del Inventario</h2>
+            <p>Total Productos: <span id="total-productos">0</span></p>
+            <p>Productos en Bajo Stock: <span id="stock-bajo">0</span></p>
+        </div>
+
+<h2>Agregar Producto</h2>
+    <form id="producto-form" class="form-producto" aria-label="Formulario para agregar un producto">
+        <input type="text" id="nombre" placeholder="Nombre del Producto" required aria-label="Nombre del producto">
+        <input type="number" id="cantidad" placeholder="Cantidad" required aria-label="Cantidad de producto">
+        <select id="categoria" required aria-label="Categoría del producto">
+        </select>
+<!-- Nuevo: filtro independiente -->
+<div class="buscar">
+  <label for="filtro-categoria">Filtrar por categoría:</label>
+  <select id="filtro-categoria">
+    <option value="todas">Todas</option>
+    <!-- Las opciones se llenarán dinámicamente -->
+  </select>
+</div>
+            <input type="file" id="imagen" accept="image/*" aria-label="Imagen del producto">
+            <button type="submit" aria-label="Añadir producto">Añadir Producto</button>
+        </form>
+
+<h2>Agregar Nueva Categoría</h2>
+<form id="form-categoria">
+  <input type="text" id="nueva-categoria" placeholder="Nombre de la categoría" required>
+  <button type="submit">Añadir Categoría</button>
+</form>
+
+<h2>Filtrar por Categoría</h2>
+    <div class="buscar">
+      <select id="filtro-categoria">
+        <option value="todas">Todas</option>
+      </select>
+    </div>
+
+<h2>Lista de Productos</h2>
+    <div class="buscar">
+       <input type="text" id="buscar" placeholder="Buscar producto..." aria-label="Buscar en el inventario">
+    </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productos">
+                <!-- Productos aquí -->
+            </tbody>
+        </table>
+
+        <div class="historial">
+  <h2>Historial de Movimientos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Acción</th>
+        <th>Producto</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody id="historial-body">
+      <!-- Historial dinámico aquí -->
+    </tbody>
+  </table>
+</div>
+    </div>
+
+    <script src="../assets/js/script.js" defer></script>
+</body>
+</html>

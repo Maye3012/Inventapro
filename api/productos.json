@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "Laptop",
+        "cantidad": 10,
+        "categoria": "Electrónica"
+    },
+    {
+        "id": 2,
+        "nombre": "Teléfono",
+        "cantidad": 5,
+        "categoria": "Móviles"
+    }
+]
